@@ -27,7 +27,7 @@ jobs:
     - name: Build the Docker image
       run:         
         docker build . --file WebApp.Dockerfile --tag OPRGPT.azurecr.io/sample-app-aoai-chatgpt:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
-        docker tag OPRGPT.azurecr.io/sample-app-aoai-chatgpt:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER fruoccopublic.azurecr.io/sample-app-aoai-chatgpt:latest;
+        docker tag OPRGPT.azurecr.io/sample-app-aoai-chatgpt:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER OPRGPT.azurecr.io/sample-app-aoai-chatgpt:latest;
         docker push OPRGPT.azurecr.io/sample-app-aoai-chatgpt:$(date +'%Y-%m-%d')_$GITHUB_RUN_NUMBER;
         docker push OPRGPT.azurecr.io/sample-app-aoai-chatgpt:latest;
       
